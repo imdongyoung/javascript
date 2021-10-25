@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .slider{
+            width: 100%;
+            position: relative;
+        }
+        .slider_item {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            transform: scale(0.9);
+        }
+        .slider_item:nth-child(odd){
+            background-color: #8e44ad;
+        }
+        .slider_item:nth-child(even){
+            background-color: #3498db;
+        }
+        .showing {
+            opacity: 1;
+            z-index: 1;
+            transform: none;
+        }
+        .arrow {
+            height: 100vh;
+            margin: 0 auto;
+            width: 70%;
+            z-index: 99;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 3rem;
+            color: #fff;
+            cursor: pointer;
+        }
+        .arrow>span:hover{
+            color: #5ac0e9;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <div class="slider_item showing"><h1>1</h1></div>
+        <div class="slider_item"><h1>2</h1></div>
+        <div class="slider_item"><h1>3</h1></div>
+        <div class="slider_item"><h1>4</h1></div>
+        <div class="slider_item"><h1>5</h1></div>
+    </div>
+    <div class="arrow">
+        <span><</span>
+        <span>></span>
+    </div>
+    <script>
+        const SHOWING_CLASS = "showing";
+        const firstSlider = document.querySelector(".slider_item:first-child");
+        const lastSlider = document.querySelector(".slider_item:last-child");
+        
+        const rightArrow = document.querySelector(".arrow span:last-child");
+        const leftArrow = document.querySelector(".arrow span:first-child");
+
+        function rightArrowClick() {
+            const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+            currentSlide.classList.remove(SHOWING_CLASS);
+            const nextSlide = currentSlide.nextElementSibling;
+            if(nextSlide){
+                nextSlide.classList.add(SHOWING_CLASS);
+            } else {
+                firstSlider.classList.add(SHOWING_CLASS);
+            }
+        }
+
+        function leftArrowClick() {
+            const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+            currentSlide.classList.remove(SHOWING_CLASS);
+            const previousSlide = currentSlide.previousElementSibling;
+            if(previousSlide){
+                previousSlide.classList.add(SHOWING_CLASS);
+            } else {
+                lastSlider.classList.add(SHOWING_CLASS);
+            }
+        }
+        
+        function slide() {
+            const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+            if (currentSlide) {
+                currentSlide.classList.remove(SHOWING_CLASS);
+                const nextSlide = currentSlide.nextElementSibling;
+                if(nextSlide){
+                    nextSlide.classList.add(SHOWING_CLASS);
+                } else {
+                    firstSlider.classList.add(SHOWING_CLASS);
+                }
+            } else {
+                firstSlider.classList.add(SHOWING_CLASS);
+            }
+        }
+
+        setInterval(slide, 5000);
+
+        rightArrow.addEventListener("click", rightArrowClick);
+        leftArrow.addEventListener("click", leftArrowClick);
+        
+    </script>
+</body>
+</html>
