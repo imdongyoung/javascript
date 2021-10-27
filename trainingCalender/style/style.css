@@ -7,7 +7,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    padding: 15px 30px;
     color: #fff;
 }
 header h1 {
@@ -18,7 +18,8 @@ header a {
     text-decoration: none;
     color: #fff;
     padding: 0 15px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 .calender-wrap {
     width: 1200px;
@@ -42,6 +43,7 @@ header a {
     margin: 20px auto;
     border-collapse : collapse;
     width: 900px;
+    border: 1px solid;
 }
 .calender-content>table td {
     width: 130px;
@@ -51,10 +53,20 @@ header a {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid;
 }
 .calender-content>table tr:not(:nth-child(2)) td {
     text-align: left;
     vertical-align: top;
     font-size: 1.2rem;
     font-weight: bold;
+}
+.today {
+    background-color: tomato;
+}
+.day {
+    border: 1px solid;
 }
