@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal">
+        <button class="open">열기</button>
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <button class="close">X</button>
+                <div>
+                    안녕
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = document.querySelector(".modal");
+        const modalOverlay = modal.querySelector(".modal-overlay");
+        const openBtn = modal.querySelector(".open");
+        const closeBtn = modal.querySelector(".close");
+    </script>
+</body>
+</html>
