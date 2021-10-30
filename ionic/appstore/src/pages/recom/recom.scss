@@ -1,0 +1,86 @@
+page-recom {
+    .gamelist-wrap{
+        border-radius: 15px;
+    }
+    .gamelist{
+        >p{
+            font-size: 15px;
+            margin-left: 10px;
+            font-weight: bolder;
+            line-height: 60px;
+            float: left;
+        }
+        >img{
+            width: 15%;
+            float: left;
+            border-radius: 15%;
+        }
+    }
+    .gamebtn{
+        float: right;
+        color:#488aff;
+        background-color: rgb(228, 227, 227);
+        padding-left:15px;
+        padding-right:15px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-radius: 20px;
+        font-weight: bolder;
+        margin-top: 15px;
+    }
+    .gamelist-1{
+        margin-top: 13px;
+        margin-left: 13px;
+        font-size: 15px;
+        color: #999;
+        font-weight: bolder;
+    }
+    .gamelist-2{
+        margin-top: -5px;
+        margin-left: 13px;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    .posterapp {
+        border-radius: 15px;
+    }
+    .posterapp-1{
+        margin-top: 13px;
+        font-size: 15px;
+        color: #999;
+    }
+    .posterapp-2{
+        font-size: 27px;
+        font-weight: bolder;
+        margin-left: 13px;
+    }
+    .posterapp-3{
+        font-size: 12px;
+        margin-bottom: 13px;
+    }
+    .posterapp-1,.posterapp-2,.posterapp-3{
+        line-height: 3px;
+    }
+    .recomapp2{
+        border-radius: 15px;
+    }
+    .recomapp2-1{
+        margin-left: 13px;
+        font-size: 25px;
+        font-weight: bolder;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+    .recomapp2-2{
+        font-size: 15px;
+        color: #999;
+    }
+    .recombtn{
+        color:#488aff;
+        background-color: rgb(228, 227, 227);
+        border-radius: 20px;
+        font-weight: bolder;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+}

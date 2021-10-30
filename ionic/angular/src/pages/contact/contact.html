@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Style 동적 변경
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div [ngStyle]="currentStyles">
+    안녕하세요? ionic 수업 중입니다. 만나서 반갑습니다.
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>bold</ion-label>
+      <ion-checkbox [(ngModel)]="bold" (ionChange)="setCurrentStyles()"
+                    color="dark" checked="false"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>italic</ion-label>
+      <ion-checkbox [(ngModel)]="italic" (ionChange)="setCurrentStyles()"
+                    color="dark" checked="false"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>large</ion-label>
+      <ion-checkbox [(ngModel)]="large" (ionChange)="setCurrentStyles()"
+                    color="dark" checked="false"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

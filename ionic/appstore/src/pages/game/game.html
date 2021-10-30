@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center;">게임</ion-title>
+    <ion-icon name="contact" (click)="onMyPage()" style="font-size: 28px; float: right; color: #488aff;"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <div class="poster-game" (click)="onClickAppDetail()">
+    <p>에디터도 플레이 중</p>
+    <p>전략적 팀 전투:리그 오브 레전드 전략 게임</p>
+    <p>신규  챔피언 대거 추가!</p>
+    <img  src="https://file.bodnara.co.kr/logo/insidelogo.php?image=%2Fhttp%3A%2F%2Ffile.bodnara.co.kr%2Fwebedit%2Fnews%2F2015%2F1600218361-20091611.jpg">
+</div>
+
+<ion-list class="recomgame">
+  <p>핵심 게임 추천</p>
+  <p>에디터가 직접 골랐습니다</p>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://t1.daumcdn.net/liveboard/appstory/0f9fe8431592498baac4cc3fc7e1259b.png">
+      <p id="gamename">Rummikub</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://djf7qc4xvps5h.cloudfront.net/game/cover/resize/3-90-48.webp?ver=2020.10.23.11.27.09">
+      <p id="gamename">Pokémon GO</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://dl.memuplay.com/new_market/img/com.riotgames.league.teamfighttactics.icon.2020-09-25-11-30-36.png">
+      <p id="gamename">전략적 팀 전투 : 리그 오브 레전드 전략 게임</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+  <ion-card (click)="onClickMenuDetail()">
+  <ion-card-header>
+    <div class="game1">
+      <img class="gameimg" src="https://pht.qoo-static.com/VHB9bVB8cTcnqwnu0nJqKYbiutRclnbGxTpwnayKB4vMxZj8pk1220Rg-6oQ68DwAkqO=w300">
+      <p>Among us!</p>
+      <p>액션</p>
+    </div>
+    <button class="gamebtn2" (click)="onClickinstall()">설치</button>
+  </ion-card-header>
+  <ion-card-content>
+    <img class="gameimg2" src="https://img.etoday.co.kr/pto_db/2020/08/600/20200824170843_1501499_1200_584.jpg">
+  </ion-card-content>
+</ion-card>
+
+<ion-list class="recomgame">
+  <p>인기 게임</p>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://pbs.twimg.com/profile_images/1339478034877837313/YeyjThzB_400x400.jpg">
+      <p id="gamename">메이플스토리M</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://play-lh.googleusercontent.com/bTTnCqhw_X5TNBR22HSNgV84UXJWUiWA8Zk393ZZqErqUs_7Y66NmoEhN0QqueMrFO0=s180-rw">
+      <p id="gamename">FIFA ONLINE 4</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://play-lh.googleusercontent.com/rIvZQ_H3hfmexC8vurmLczLtMNBFtxCEdmb2NwkSPz2ZuJJ5nRPD0HbSJ7YTyFGdADQ=s180-rw">
+      <p id="gamename">클래시 로얄</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-card (click)="onClickMenuDetail()">
+  <ion-card-header>
+    <div class="game1">
+      <img class="gameimg" src="https://pht.qoo-static.com/VHB9bVB8cTcnqwnu0nJqKYbiutRclnbGxTpwnayKB4vMxZj8pk1220Rg-6oQ68DwAkqO=w300">
+      <p>배틀그라운드</p>
+      <p>온 국민의 배틀로얄</p>
+    </div>
+    <button class="gamebtn2" (click)="onClickinstall()">설치</button>
+  </ion-card-header>
+  <ion-card-content>
+    <img class="gameimg2" src="https://mblogthumb-phinf.pstatic.net/MjAxODA1MjlfMzcg/MDAxNTI3NTQwNTE2Mjgz.c5aWbdQWCHZ-L0Z-7wISYlad3tgPJoOtbnBJAEhc38kg.Hp1qLkH6KbWipbJvD1L0BzlVdiR-KgDNwR-wahSCH4Mg.JPEG.isdn2721/%EB%B0%B0%ED%8B%80%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C_%EB%AA%A8%EB%B0%94%EC%9D%BC_%EB%B0%A9%EA%B5%AC%EC%84%9D_%EC%97%AC%ED%8F%AC_%281%29.jpg?type=w800">
+  </ion-card-content>
+</ion-card>
+
+<ion-list class="recomgame">
+  <p>유료 게임 순위</p>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP=s180-rw">
+      <p id="gamename">Minecraft</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://play-lh.googleusercontent.com/L8rCly8hMWuP95PbihDZlSV2u0oGrs0hl2lEXboO7XHX2XalJZ1rjgOsFYXnEDWbpQ=s180-rw">
+      <p id="gamename">A Dance if Fire and Ice</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+  <ion-item (click)="onClickAppDetail()">
+    <ion-label>
+      <img class="gameimg" src="https://play-lh.googleusercontent.com/qVU3Kisypswd_mwYwmvoGsc-ohOU_0fWN8PvcM4zqXN3gHJbMW4_L00YcAMqr8LZ6w=s180-rw">
+      <p id="gamename">60 Seconds!</p>
+      <button class="gamebtn" (click)="onClickinstall()">설치</button>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-card (click)="onClickMenuDetail()">
+  <ion-card-header>
+    <div class="game1">
+      <img class="gameimg" src="data:image/jpeg;base64,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">
+      <p>리그오브레전드</p>
+      <p>5대5 MOBA 전투를 위한 팀을 구...</p>
+    </div>
+    <button class="gamebtn2" (click)="onClickinstall()">설치</button>
+  </ion-card-header>
+  <ion-card-content>
+    <img class="gameimg2" src="https://img.taplb.com/md5/06/69/0669fabca5b07603a5f2853be34a293d/-_-/fit-in/1320x0/filters:quality(80):background_color(white):format(jpeg)
+    ">
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,44 @@
+<!--
+  Generated template for the MenudetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>menudetail</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onDeletMenu()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="onEditMenu()">
+        <ion-icon name="hammer"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    <h1>Menu title</h1>
+  </ion-card-header>
+  <ion-card-content>
+    <p>음식에 대하여...</p>
+    <div class="etc">
+      <p>
+        <span>chef:   </span>
+          메뉴개발자
+      </p>
+      <p>
+        <span>Date:   </span>
+        개발일자
+      </p>
+      <p>
+        <span>Update:   </span>
+        최종수정
+      </p>
+    </div>
+  </ion-card-content>
+</ion-card>
+</ion-content>

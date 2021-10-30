@@ -1,0 +1,55 @@
+page-lol {
+    .Ingame{
+        >img{
+            width: 38%;
+            border-radius: 27%;
+            float: left;
+        }
+    }
+    .Ingame1 {
+        font-size: 25px;
+        font-weight: bolder;
+        margin-bottom: -10px;
+    }
+    .Ingame2 {
+        font-size: 16px;
+        color: #999;
+    }
+    .Ingame1,.Ingame2{
+        margin-left: 200px;
+    }
+    .recombtn {
+        margin-top: 35px;
+        margin-left: 20px;
+        background-color: #488aff;
+        color: white;
+        border-radius: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 32px;
+        padding-left: 32px;
+        font-weight: bolder;
+    }
+    .rv-wrap{
+        margin-left: 25px;
+    }
+    .rv{
+        float: left;
+        text-align: center;
+        margin-left: 55px;
+        >p{
+            color: #999;
+        }
+        >p:nth-child(2){
+            font-size: 25px;
+            font-weight: bolder;
+            color: #999;
+        }
+    }
+    .staricon {
+        color: #999;
+    }
+    .Ingameimg{
+        border-radius: 10px;
+    }
+}
