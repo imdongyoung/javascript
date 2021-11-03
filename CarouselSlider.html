@@ -1,70 +1,45 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        width: 300vw;
-        transition: all 0.5s;
-      }
-      .inner {
-        width: 100vw;
-        float: left;
-      }
-      .inner img {
+      .wrap {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100vh;
+      }
+      .red {
+        width: 500px;
+        height: 200px;
+        float: left;
+        background-color: red;
+      }
+      .blue {
+        width: 500px;
+        height: 200px;
+        float: left;
+        background-color: blue;
+      }
+      .yellow {
+        width: 500px;
+        height: 200px;
+        float: left;
+        background-color: yellow;
       }
     </style>
   </head>
   <body>
-    <div style="overflow: hidden">
-      <div class="container">
-        <div class="inner show">
-          <img src="img/3.jpg" alt="" />
-        </div>
-        <div class="inner">
-          <img src="img/5.jpg" alt="" />
-        </div>
-        <div class="inner">
-          <img src="img/6.jpg" alt="" />
-        </div>
-      </div>
+    <div class="wrap">
+      <div class="red">l</div>
+      <div class="blue">2</div>
+      <div class="yellow">3</div>
     </div>
-    <button class="arrowL">&lt;</button>
-    <button class="arrowR">&gt;</button>
-    <button class="버튼1">1</button>
-    <button class="버튼2">2</button>
-    <button class="버튼3">3</button>
-
-    <script>
-      const container = document.querySelector(".container");
-
-      const bt1 = document.querySelector(".버튼1");
-      const bt2 = document.querySelector(".버튼2");
-      const bt3 = document.querySelector(".버튼3");
-
-      const arrowL = document.querySelector(".arrowL");
-      const arrowR = document.querySelector(".arrowR");
-
-      const firstSlide = document.querySelector(".inner:first-chlid");
-
-      bt1.addEventListener("click", function () {
-        container.style.transform = "translate(0)";
-      });
-      bt2.addEventListener("click", function () {
-        container.style.transform = "translate(-100vw)";
-      });
-      bt3.addEventListener("click", function () {
-        container.style.transform = "translate(-200vw)";
-      });
-    </script>
   </body>
 </html>
