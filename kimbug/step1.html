@@ -5,21 +5,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+      }
+      .box {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: tomato;
+        animation-name: move-box;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes move-box {
+        from {
+          top: 0;
+          background-color: tomato;
+        }
+
+        to {
+          top: -200px;
+          background-color: #0066ff;
+        }
+      }
+      .hover {
+        display: block;
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: tomato;
+      }
+      .hover:active {
+        background-color: rgb(250, 76, 46);
+      }
+      button {
+        border: none;
+        background-color: #fff;
+      }
+      .line-button {
+        position: relative;
+        font-size: 16px;
+        line-height: 1.25;
+        color: #151b26;
+        padding: 18px 30px;
+      }
+      .line-button::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 5px;
+        background-color: #0066ff;
+        transition: width 0.5s ease-in;
+      }
+      .line-button:hover::after {
+        width: 100%;
+      }
+
+      .loading {
+        width: 500px;
+        margin: 0 auto;
+      }
+      .loading-title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3333333333;
+        color: #151b26;
+        margin: 20px auto;
+        text-align: center;
+        animation-name: loading-title;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes loading-title {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .progress-bar {
+        position: relative;
+        margin: 0 auto;
+        width: 300px;
+        height: 12px;
+        background-color: #e5eaef;
+        border-radius: 100px;
+      }
+      .progress-bar-gauge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-radius: 100px;
+        background-color: #13ce66;
+        animation-name: loading;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes loading {
+        0% {
+          width: 0;
+          opacity: 1;
+        }
+        90% {
+          width: 100%;
+          opacity: 1;
+        }
+        100% {
+          width: 100%;
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
-    <dl>
-      <dt>
-        <dfn>이름</dfn>
-      </dt>
-      <dd>임동영</dd>
-      <dt>학교</dt>
-      <dd>세명컴퓨터고등학교</dd>
-    </dl>
-    <blockquote cite="http://naver.com">
-      안녕하세요 저는 임동영입니다. <br />
-      세명컴퓨터고등학교
-      <cite>임동영</cite>
-    </blockquote>
-    <q>임동영</q>
+    <div class="box"></div>
+    <a class="hover">Dongyoung</a>
+    <button class="line-button">Button</button>
+    <section class="loading">
+      <h1 class="loading-title">Loading...</h1>
+      <div class="progress-bar" aria-hidden="true">
+        <span class="progress-bar-gauge"></span>
+      </div>
+    </section>
   </body>
 </html>
