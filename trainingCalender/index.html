@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>HealthScedule</h1>
-        <div>
-            <a href="">일정표</a>
-            <a href="">식단공유</a>
-            <a href="">운동루틴</a>
-        </div>
-        <div>
-            <a href="">로그인</a>
-            <a href="">회원가입</a>
-        </div>
+      <h1>HealthScedule</h1>
+      <div>
+        <a href="">일정표</a>
+        <a href="">식단공유</a>
+        <a href="">운동루틴</a>
+      </div>
+      <div>
+        <a href="">로그인</a>
+        <a href="">회원가입</a>
+      </div>
     </header>
-    <div class="calender-wrap">
-        <div class="calender-overlay">
-            <div class="month">
-                <div id="tbCalendarY"></div>
-                <div>
-                    <p onclick="prevCalendar()">&#60;&nbsp;&nbsp;</p>
-                    <p id="tbCalendarM"></p>
-                    <p onclick="nextCalendar()">&nbsp;&nbsp;&#62;</p>
-                </div>
-            </div>
-            <div class="calender-content">
-                <table id="calendar" align="center">
-                    <tr></tr>
-                    <tr>
-                        <td><font color ="tomato">일</td>
-                        <td>월</td>
-                        <td>화</td>
-                        <td>수</td>
-                        <td>목</td>
-                        <td>금</td>
-                        <td><font color ="skyblue">토</td>
-                    </tr>
-                </table>
-            </div>
+    <div class="calendar-wrap">
+      <div class="top">
+        <div class="left">
+          <button onclick="prev()">&lt;</button>
         </div>
-        <div class="modal">
-            <div class="modal-overlay">
-                <div class="modal-content">
-                    <div class="modal-header">2021/10/28<span class="closeBtn">X</span></div>
-                    <div class="modal-main">
-                        <ul>
-                            <li>간지나게 숨쉬기</li>
-                            <li>끝내주게 잠자기</li>
-                            <li>완벽하게 먹기</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="date">
+          <div class="year"></div>
+          <div class="month"></div>
         </div>
+        <div class="right">
+          <button onclick="next()">&gt;</button>
+        </div>
+      </div>
+      <div class="calendar">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>일</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+              <th>토</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
+
     <script src="js/calendar.js"></script>
     <script src="js/background.js"></script>
     <script src="js/modal.js"></script>
-</body>
+  </body>
 </html>
